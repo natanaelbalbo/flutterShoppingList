@@ -4,18 +4,21 @@ class Item {
   final String categoryId;
   final String categoryName;
 
-  Item(
-      {required this.id,
-      required this.name,
-      required this.categoryId,
-      required this.categoryName});
+  Item({
+    required this.id,
+    required this.name,
+    required this.categoryId,
+    required this.categoryName,
+  });
 
   factory Item.fromJson(Map<String, dynamic> json) {
+    final categoryIdData = json['categoryId'];
+    
     return Item(
-      id: json['_id'],
-      name: json['name'],
-      categoryId: json['categoryId']['_id'],
-      categoryName: json['categoryId']['name'],
+      id: json['_id'] ?? '',
+      name: json['name'] ?? '',
+      categoryId: categoryIdData != null ? categoryIdData['_id'] ?? '' : '',
+      categoryName: categoryIdData != null ? categoryIdData['name'] ?? '' : '',
     );
   }
 
