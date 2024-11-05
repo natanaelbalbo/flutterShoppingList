@@ -1,16 +1,62 @@
-# shoppingapp
+# ShoppingApp
 
-A new Flutter project.
+Este é um aplicativo de lista de compras desenvolvido em Flutter. O aplicativo permite aos usuários criar, visualizar e gerenciar itens de uma lista de compras, incluindo a seleção de categorias para cada item. A estrutura foi desenvolvida com um foco em uma experiência de usuário intuitiva e também em um código modular e testável.
 
-## Getting Started
+## Funcionalidades
 
-This project is a starting point for a Flutter application.
+- **Adição de itens**: Permite ao usuário adicionar um novo item à lista com um nome e uma categoria selecionada.
+- **Listagem de itens**: Mostra todos os itens adicionados pelo usuário.
+- **Categorias**: As categorias ajudam a organizar os itens de acordo com diferentes tipos.
 
-A few resources to get you started if this is your first Flutter project:
+## Estrutura do Projeto
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+O projeto é organizado em algumas pastas principais:
+- **lib/components**: Contém widgets reutilizáveis, como `CategoryDropdown`.
+- **lib/models**: Contém a definição dos modelos de dados, como `Item`.
+- **lib/screens**: Contém as telas principais do aplicativo, como `ItemFormScreen`.
+- **lib/services**: Contém as classes de serviços, incluindo `ApiService`, que faz chamadas para o backend ou manipula dados.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Pré-requisitos
+
+Para rodar o projeto localmente, é necessário:
+
+- **Flutter SDK**: Certifique-se de ter o Flutter instalado. [Instruções de instalação](https://flutter.dev/docs/get-started/install).
+- **Git**: Para clonar o repositório.
+
+## Como Iniciar o Projeto
+
+1. **Clonar o repositório**:
+
+   ```bash
+   git clone https://github.com/usuario/shoppingapp.git
+   cd shoppingapp
+   ```
+
+2. **Instalar dependências**:
+
+   Na raiz do projeto, execute o comando abaixo para instalar as dependências listadas no arquivo `pubspec.yaml`.
+
+   ```bash
+   flutter pub get
+   ```
+
+3. **Executar o aplicativo**:
+
+   Conecte um dispositivo ou inicialize um emulador e execute:
+
+   ```bash
+   flutter run
+   ```
+
+## Estrutura de Dados
+
+- **Item**: Representa um item na lista de compras, com propriedades como `id`, `name`, `categoryId` e `categoryName`.
+- **Category**: Representa uma categoria de itens, com propriedades como `id` e `name`.
+
+## Testes
+
+O projeto inclui alguns testes de interface. Para rodá-los, use:
+
+```bash
+flutter test
+```
