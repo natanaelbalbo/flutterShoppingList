@@ -55,7 +55,7 @@ Para rodar o projeto localmente, é necessário:
 
 ## Testes
 
-O projeto inclui alguns testes de interface. Para rodá-los, use:
+Para rodar os tests use: 
 
 ```bash
 flutter test
