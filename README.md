@@ -114,5 +114,3 @@ Para executar o projeto localmente, é necessário:
    ```bash
    flutter test
    ```
-
----
